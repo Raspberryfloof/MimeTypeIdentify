@@ -17,7 +17,7 @@ namespace MimeTypeIdentify
         /// based on this data.
         /// 
         /// This is done by reading a file from disk in this example application, but could also
-        /// be done from within a memory stream.
+        /// be done entirely by using data from within a memory stream.
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
@@ -74,7 +74,7 @@ namespace MimeTypeIdentify
                 var memStreamResults = mimeTypeInspector.Inspect(memStream);
                 if (memStreamResults.FirstOrDefault() == null)
                 {
-                    Console.WriteLine("Error: unable to determine file type of byte array!");
+                    Console.WriteLine("Error: unable to determine file type of memory stream!");
                 }
                 else
                 {
